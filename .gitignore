@@ -1,0 +1,12 @@
+/.idea
+/.bundle
+/.vscode
+
+/node_modules
+
+/android/app/build
+/android/.gradle
+/android/.idea
+/android/java_pid*
+
+package-lock.json
