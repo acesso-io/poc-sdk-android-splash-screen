@@ -23,11 +23,13 @@ const App = () => {
   useEffect(() => {
     eventEmitter.addListener('onSuccess', e => {
       setStateCamera(e.objResult);
-      log.info("sucesso-react-native");
+      log.info("success-react-native");
     });
-
+    
     eventEmitter.addListener('onError', e => {
       setStateCamera(e.objResult);
+      log.info("error-react-native");
+      log.info(e.objResult);
     });
 
     return () => {
