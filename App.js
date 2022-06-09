@@ -8,7 +8,6 @@ import {
   ScrollView,
 } from 'react-native';
 import { logger } from 'react-native-logs';
-import SplashScreen from 'react-native-splash-screen';
 
 var log = logger.createLogger();
 
@@ -17,8 +16,6 @@ const App = () => {
 
   const { UnicoCheckModule } = NativeModules;
   const eventEmitter = new NativeEventEmitter(UnicoCheckModule);
-
-  SplashScreen.hide()
 
   useEffect(() => {
     eventEmitter.addListener('onSuccess', e => {
